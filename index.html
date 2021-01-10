@@ -94,9 +94,21 @@
                conpassword.innerHTML="**please fill the same password";
                return false;
                }
+             /*these conditions for mobilenumbers*/
                if(mobilenumber==""){
                let mobilenumber=document.getElementById('mobilenumber');
                mobilenumber.innerHTML="**please fill the mobile number field";
+               return false;
+               }
+               /*these conditions is use when we write in type=text*/
+               /*if(!isNaN(mobilenumber)){
+               	let mobilenumber=document.getElementById('mobilenumber');
+               mobilenumber.innerHTML="**please write only numbers";
+               return false;
+               }*/
+               if(mobilenumber.length!=10){
+               	let mobilenumber=document.getElementById('mobilenumber');
+               mobilenumber.innerHTML="**Enter 10 digit";
                return false;
                }
                if(emailid==""){           
